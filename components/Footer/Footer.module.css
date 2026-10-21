@@ -1,0 +1,8 @@
+.footer { border-top: 1px solid var(--line); }
+.inner { width: min(1000px, calc(100% - 48px)); min-height: 82px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; letter-spacing: -.07em; color: #d6caff; }
+.brand span { color: var(--accent); }
+.brand b { color: #9ba2b4; font-size: 9px; letter-spacing: .1em; }
+.inner p, .backToTop { color: #737a8b; font-size: 10px; }
+.backToTop:hover { color: var(--text); }
+@media (max-width: 700px) { .inner { width: calc(100% - 32px); padding: 20px 0; flex-wrap: wrap; } .inner p { order: 3; width: 100%; margin: 0; } }

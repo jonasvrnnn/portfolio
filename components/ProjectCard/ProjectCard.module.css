@@ -1,0 +1,22 @@
+.card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); transition: transform .25s ease, border-color .25s ease; }
+.card:hover { transform: translateY(-4px); border-color: rgba(167,139,250,.42); }
+.cardTop { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px 0; }
+.number { color: #777f92; font: 9px var(--font-mono); letter-spacing: .1em; }
+.arrow { color: var(--accent); font-size: 18px; }
+.art { position: relative; display: grid; place-items: center; height: 175px; margin: 14px 16px 0; overflow: hidden; border: 1px solid rgba(255,255,255,.06); border-radius: 10px; background: radial-gradient(ellipse at 50% 80%, rgba(93, 100, 190, .2), transparent 55%), #0e1119; }
+.art::before, .art::after { content: ""; position: absolute; width: 220px; height: 90px; border: 1px solid rgba(167,139,250,.2); border-radius: 50%; transform: rotate(-28deg); }
+.art::after { width: 150px; height: 220px; border-color: rgba(112,165,255,.18); transform: rotate(35deg); }
+.artGlow { position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(167,139,250,.15); filter: blur(38px); }
+.artLetters { position: relative; z-index: 1; color: #d6caff; font-size: 100px; line-height: 1; font-weight: 800; letter-spacing: -.1em; }
+.artLabel { position: absolute; z-index: 1; bottom: 13px; right: 14px; color: #7f879b; font: 8px var(--font-mono); letter-spacing: .12em; }
+.body { padding: 21px 20px 20px; }
+.eyebrow { margin: 0 0 8px; color: var(--accent); font: 9px var(--font-mono); letter-spacing: .08em; }
+.body h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.04em; }
+.description { min-height: 58px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 17px; }
+.tags span { padding: 6px 8px; border: 1px solid var(--line); border-radius: 5px; color: #aeb4c5; font-size: 9px; }
+.links { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--line); font-size: 11px; font-weight: 700; }
+.links a { transition: color .2s ease; }
+.links a:hover { color: #c4b5fd; }
+.links a span { color: var(--accent); margin-left: 5px; }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }

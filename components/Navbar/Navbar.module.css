@@ -1,0 +1,20 @@
+.header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(11, 13, 18, .82); backdrop-filter: blur(18px); }
+.inner { width: min(1120px, calc(100% - 48px)); min-height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.brandMark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(167, 139, 250, .55); border-radius: 12px; font-size: 19px; letter-spacing: -.08em; }
+.brandMark span { color: var(--accent); }
+.nav { display: flex; align-items: center; gap: 30px; color: var(--muted); font-size: 13px; }
+.nav a { transition: color .2s ease; }
+.nav a:hover { color: var(--text); }
+.nav .navContact { color: var(--text); padding: 11px 15px; border: 1px solid var(--line); border-radius: 10px; }
+.navContact span { color: var(--accent); margin-left: 5px; }
+.menuToggle { display: none; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 9px; padding: 9px 12px; cursor: pointer; }
+@media (max-width: 720px) {
+  .inner { width: min(100% - 32px, 1120px); min-height: 68px; }
+  .brandName { font-size: 10px; }
+  .menuToggle { display: inline-flex; gap: 10px; align-items: center; }
+  .nav { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 24px 24px; background: #0e1017; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; }
+  .navOpen { display: flex; }
+  .nav a { padding: 14px 4px; }
+  .nav .navContact { margin-top: 8px; text-align: center; }
+}
