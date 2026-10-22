@@ -4,6 +4,8 @@ Gebruik een eigen demo-URL per project. Het portfolio sluit de demo rechtstreeks
 
 Het telefoonframe gebruikt de webexport van dezelfde Expo-app en is geen native Android/iOS-emulator. Voor echte native functies is een aparte emulatordienst nodig. De categorie en projectfilter voor Koffie zijn **App**.
 
+De full-stackdemo behoudt een desktopviewport van 1440 × 900 pixels. Het iframe wordt als geheel verkleind naar de beschikbare breedte, met dezelfde verhoudingen op de homepage, detailpagina en mobiel. Daardoor schakelt de schoolsite niet over naar een smalle mobiele indeling. Klikken, formulieren en scrollen blijven mogelijk; Koffie houdt zijn eigen telefoonviewport.
+
 ## 1. Koffie → Vercel
 
 Repository: https://github.com/jonasvrnnn/koffie

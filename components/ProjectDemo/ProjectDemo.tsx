@@ -1,4 +1,5 @@
 import type { Project } from "@/data/projects";
+import WebsiteDemoFrame from "./WebsiteDemoFrame";
 import styles from "./ProjectDemo.module.css";
 
 type ProjectDemoProps = {
@@ -23,7 +24,9 @@ export default function ProjectDemo({ project, compact = false }: ProjectDemoPro
           <div className={styles.chrome} aria-hidden="true">
             {isApp ? <span className={styles.speaker} /> : <><span className={styles.dots}>● ● ●</span><span className={styles.browserTitle}>{project.title}</span></>}
           </div>
-          {project.demoUrl ? (
+          {project.demoUrl && !isApp ? (
+            <WebsiteDemoFrame src={project.demoUrl} title={`${project.title} — interactieve website`} />
+          ) : project.demoUrl ? (
             <iframe
               className={styles.screen}
               src={project.demoUrl}
@@ -44,7 +47,7 @@ export default function ProjectDemo({ project, compact = false }: ProjectDemoPro
         </div>
       </div>
       <p className={styles.caption}>
-        {isApp ? "Een mobiele app, met een interactieve webdemo in een telefoonframe." : "De website gebruiken, rechtstreeks in mijn portfolio."}
+        {isApp ? "Een mobiele app, met een interactieve webdemo in een telefoonframe." : "De volledige desktopweergave, verkleind om hier te passen. Je kunt klikken en scrollen."}
       </p>
       {project.demoUrl && <p className={styles.help}>Blijft het venster leeg? De demo kan tijdelijk onbereikbaar zijn of insluiten blokkeren.</p>}
     </section>

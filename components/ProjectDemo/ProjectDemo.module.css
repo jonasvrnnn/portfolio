@@ -13,7 +13,6 @@
 .screen { display: block; width: 100%; height: 620px; border: 0; background: #fff; }
 .phone .screen { border-radius: 22px; }
 .screen:focus-visible { outline: 2px solid #c4b5fd; outline-offset: -3px; }
-.browser .screen { height: 580px; }
 .placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: 420px; padding: 32px 22px; text-align: center; background: linear-gradient(160deg, #211b30, #101722); }
 .phone .placeholder { min-height: 540px; border-radius: 22px; }
 .symbol { display: grid; place-items: center; width: 68px; height: 68px; border: 1px solid rgba(196,181,253,.2); border-radius: 20px; color: #c4b5fd; background: rgba(196,181,253,.06); font-size: 32px; }
@@ -28,12 +27,11 @@
 .compact .stage { padding-top: 20px; }
 .compact .phone { width: min(100%, 290px); border-radius: 32px; }
 .compact .phone .screen { height: 460px; }
-.compact .browser .screen { height: 460px; }
 .compact .phone .placeholder { min-height: 400px; }
 .compact .browser .placeholder { min-height: 444px; }
 @media (max-width: 480px) {
   .demo { padding: 12px; }
   .compact { margin-left: 10px; margin-right: 10px; }
-  .screen, .browser .screen { height: 500px; }
+  .screen { height: 500px; }
   .placeholder { padding: 26px 16px; }
 }

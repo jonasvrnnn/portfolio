@@ -1,0 +1,3 @@
+.viewport { position: relative; width: 100%; aspect-ratio: 1440 / 900; overflow: hidden; background: #fff; }
+.screen { position: absolute; top: 0; left: 0; display: block; width: 1440px; height: 900px; max-width: none; border: 0; transform-origin: top left; background: #fff; }
+.screen:focus-visible { outline: 2px solid #c4b5fd; outline-offset: -3px; }
