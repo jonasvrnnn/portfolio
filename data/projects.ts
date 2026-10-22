@@ -7,6 +7,7 @@ export type Project = {
   technologies: string[];
   category: "Web" | "Full-stack";
   githubUrl: string;
+  demoUrl?: string;
   featured: boolean;
   number: string;
 };
@@ -17,12 +18,13 @@ export const projects: Project[] = [
     title: "Koffie",
     eyebrow: "Persoonlijk project",
     description:
-      "Een project rond koffie en webdevelopment. Bekijk de repository voor de huidige implementatie en details.",
+      "Een koffie-app waarin je warme en koude koffies ontdekt, favorieten bewaart en je bestellingen bijhoudt.",
     longDescription:
-      "Dit project is opgenomen in mijn portfolio om mijn groei als developer te tonen. Voeg hier een concrete uitleg toe over het doel, de belangrijkste functionaliteiten, jouw aanpak en wat je eruit geleerd hebt.",
-    technologies: ["Webdevelopment", "In ontwikkeling"],
+      "Gebouwd met Expo en React Native, met ondersteuning voor de browser. De app haalt koffies op via een externe API. Je kunt koffies bekijken, favorieten opslaan en een bestellijst met aantallen bijhouden. Favorieten en bestellingen worden lokaal op je apparaat bewaard.",
+    technologies: ["Expo", "React Native", "TypeScript", "REST API"],
     category: "Web",
     githubUrl: "https://github.com/jonasvrnnn/koffie",
+    demoUrl: process.env.NEXT_PUBLIC_KOFFIE_DEMO_URL || undefined,
     featured: true,
     number: "01",
   },
@@ -31,12 +33,13 @@ export const projects: Project[] = [
     title: "Project webontwikkeling 2025",
     eyebrow: "Schoolproject",
     description:
-      "Een webontwikkelingsproject uit mijn opleiding aan AP Hogeschool. De details kunnen worden aangevuld met de gebruikte stack en functies.",
+      "Een webapplicatie om Bijbelboeken en categorieën te verkennen, met zoeken, filters en gebruikersaccounts.",
     longDescription:
-      "Dit schoolproject toont mijn ervaring met het opbouwen van een webapplicatie. Vul aan welke functionaliteiten je zelf gemaakt hebt, welke technologieën gebruikt zijn en hoe de samenwerking verliep.",
-    technologies: ["Webdevelopment", "Schoolproject"],
+      "Een schoolproject met een Express-server en EJS-templates. Boeken, categorieën, gebruikers en sessies worden opgeslagen in MongoDB. Bezoekers kunnen een account aanmaken en boeken doorzoeken en filteren; beheerders kunnen boekgegevens aanpassen.",
+    technologies: ["TypeScript", "Express", "EJS", "MongoDB"],
     category: "Full-stack",
     githubUrl: "https://github.com/jonasvrnnn/project-webontwikkeling-2025",
+    demoUrl: process.env.NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL || undefined,
     featured: true,
     number: "02",
   },

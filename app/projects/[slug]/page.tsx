@@ -22,7 +22,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     <p className={styles.lead}>{project.description}</p>
     <div className={styles.visual} aria-hidden="true"><span>{project.title.slice(0, 1)}</span><small>JONAS / DEV</small></div>
     <section className={styles.details}><div><p className={styles.label}>OVER HET PROJECT</p><p>{project.longDescription}</p></div><div><p className={styles.label}>TECHNOLOGIEËN</p><div className={styles.tags}>{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div></section>
-    <a className={styles.github} href={project.githubUrl} target="_blank" rel="noreferrer">Bekijk de code op GitHub <span>↗</span></a>
-    <p className={styles.editNote}>Tip: werk de beschrijving en technologieën bij in <code>data/projects.ts</code> zodat deze pagina jouw echte werk weerspiegelt.</p>
+    <div className={styles.actions}>
+      {project.demoUrl && <a className={styles.github} href={project.demoUrl} target="_blank" rel="noopener noreferrer">Bekijk live demo <span aria-hidden="true">↗</span></a>}
+      <a className={styles.source} href={project.githubUrl} target="_blank" rel="noopener noreferrer">Bekijk code op GitHub <span aria-hidden="true">↗</span></a>
+    </div>
   </main><Footer /></>;
 }
