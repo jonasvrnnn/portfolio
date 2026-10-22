@@ -39,7 +39,7 @@ export const projects: Project[] = [
     technologies: ["TypeScript", "Express", "EJS", "MongoDB"],
     category: "Full-stack",
     githubUrl: "https://github.com/jonasvrnnn/project-webontwikkeling-2025",
-    demoUrl: process.env.NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL || undefined,
+    demoUrl: process.env.NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL ? "/demo/boeken" : undefined,
     featured: true,
     number: "02",
   },
