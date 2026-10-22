@@ -5,7 +5,7 @@ export type Project = {
   description: string;
   longDescription: string;
   technologies: string[];
-  category: "Web" | "Full-stack";
+  category: "App" | "Web" | "Full-stack";
   githubUrl: string;
   demoUrl?: string;
   featured: boolean;
@@ -16,13 +16,13 @@ export const projects: Project[] = [
   {
     slug: "koffie",
     title: "Koffie",
-    eyebrow: "Persoonlijk project",
+    eyebrow: "Mobiele app · Persoonlijk project",
     description:
       "Een koffie-app waarin je warme en koude koffies ontdekt, favorieten bewaart en je bestellingen bijhoudt.",
     longDescription:
       "Gebouwd met Expo en React Native, met ondersteuning voor de browser. De app haalt koffies op via een externe API. Je kunt koffies bekijken, favorieten opslaan en een bestellijst met aantallen bijhouden. Favorieten en bestellingen worden lokaal op je apparaat bewaard.",
     technologies: ["Expo", "React Native", "TypeScript", "REST API"],
-    category: "Web",
+    category: "App",
     githubUrl: "https://github.com/jonasvrnnn/koffie",
     demoUrl: process.env.NEXT_PUBLIC_KOFFIE_DEMO_URL || undefined,
     featured: true,

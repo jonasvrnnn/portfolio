@@ -1,0 +1,39 @@
+.demo { min-width: 0; margin: 38px 0; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 50% 65%, rgba(167,139,250,.1), transparent 65%), #0e1119; }
+.heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; color: #b5a3e9; font: 10px var(--font-mono); letter-spacing: .09em; }
+.status { color: #9ca5b8; font-size: 9px; letter-spacing: 0; }
+.stage { display: flex; justify-content: center; min-width: 0; padding: 28px 0 20px; }
+.phone, .browser { display: flex; flex-direction: column; min-width: 0; overflow: hidden; background: #171b25; box-shadow: 0 20px 55px rgba(0,0,0,.28); }
+.phone { width: min(100%, 360px); padding: 8px; border: 1px solid #454958; border-radius: 38px; }
+.browser { width: 100%; border: 1px solid #383e4d; border-radius: 12px; }
+.chrome { display: flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 30px; }
+.speaker { width: 66px; height: 6px; margin: 0 0 7px; border-radius: 10px; background: #07090e; }
+.browser .chrome { justify-content: flex-start; gap: 18px; padding: 10px 14px; border-bottom: 1px solid #383e4d; }
+.dots { color: #8a789f; font-size: 10px; letter-spacing: 3px; white-space: nowrap; }
+.browserTitle { overflow: hidden; color: #b2b8c8; font: 10px var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+.screen { display: block; width: 100%; height: 620px; border: 0; background: #fff; }
+.phone .screen { border-radius: 22px; }
+.screen:focus-visible { outline: 2px solid #c4b5fd; outline-offset: -3px; }
+.browser .screen { height: 580px; }
+.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: 420px; padding: 32px 22px; text-align: center; background: linear-gradient(160deg, #211b30, #101722); }
+.phone .placeholder { min-height: 540px; border-radius: 22px; }
+.symbol { display: grid; place-items: center; width: 68px; height: 68px; border: 1px solid rgba(196,181,253,.2); border-radius: 20px; color: #c4b5fd; background: rgba(196,181,253,.06); font-size: 32px; }
+.placeholder h3 { margin: 0; color: #ede9f7; font-size: 23px; letter-spacing: -.04em; }
+.placeholder p { max-width: 270px; margin: 0; color: #a7aabb; font-size: 12px; line-height: 1.8; }
+.pending { max-width: 240px; color: #9296aa; font: 9px/1.8 var(--font-mono); }
+.homeIndicator { display: flex; justify-content: center; padding: 12px 0 3px; }
+.homeIndicator span { width: 90px; height: 4px; border-radius: 8px; background: #777b89; }
+.caption, .help { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; text-align: center; }
+.help { margin-top: 8px; color: #9399aa; }
+.compact { margin: 16px 16px 0; padding: 14px; }
+.compact .stage { padding-top: 20px; }
+.compact .phone { width: min(100%, 290px); border-radius: 32px; }
+.compact .phone .screen { height: 460px; }
+.compact .browser .screen { height: 460px; }
+.compact .phone .placeholder { min-height: 400px; }
+.compact .browser .placeholder { min-height: 444px; }
+@media (max-width: 480px) {
+  .demo { padding: 12px; }
+  .compact { margin-left: 10px; margin-right: 10px; }
+  .screen, .browser .screen { height: 500px; }
+  .placeholder { padding: 26px 16px; }
+}

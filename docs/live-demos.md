@@ -1,6 +1,8 @@
 # Projecten werkend tonen
 
-Gebruik een eigen demo-URL per project. Het portfolio toont dan **Bekijk live demo** op de projectkaart en detailpagina, naast de link naar de code. Zonder URL blijft de demoknop verborgen. De projecten worden in een nieuw tabblad geopend.
+Gebruik een eigen demo-URL per project. Het portfolio sluit de demo rechtstreeks in op de homepage en detailpagina. Koffie verschijnt als **mobiele app in een telefoonframe**; de full-stacksite in een browserframe. De bezoeker blijft in het portfolio. Zonder URL toont het frame duidelijk dat de interactieve demo nog niet beschikbaar is. Alleen de aparte codelink opent GitHub.
+
+Het telefoonframe gebruikt de webexport van dezelfde Expo-app en is geen native Android/iOS-emulator. Voor echte native functies is een aparte emulatordienst nodig. De categorie en projectfilter voor Koffie zijn **App**.
 
 ## 1. Koffie → Vercel
 
@@ -31,7 +33,7 @@ De huidige export is een single-page app. Voeg in de **Koffie-repository** een `
 }
 ```
 
-Controleer na deployment op desktop en mobiel: koffies laden, een detailpagina openen, een favoriet bewaren, een bestelling toevoegen en aantallen aanpassen. Ververs ook een subpagina. Favorieten en bestellingen gebruiken lokale opslag; het gaat om een bestellijst, zonder betaling.
+Controleer na deployment op desktop en mobiel: koffies laden, een detailpagina openen, een favoriet bewaren, een bestelling toevoegen en aantallen aanpassen. Ververs ook een subpagina. Test deze acties zowel rechtstreeks als in het telefoonframe van het portfolio. Favorieten en bestellingen gebruiken lokale opslag; het gaat om een bestellijst, zonder betaling.
 
 **Nog te controleren:** de app gebruikt `sampleapis.assimilate.be` voor warme en koude koffies. Het cloudnetwerk blokkeerde deze bestemming met HTTP 403, waardoor bereikbaarheid en browser-CORS niet zijn vastgesteld. Een geslaagde export bewijst dus nog geen werkende koffielijst. `expo-notifications` wordt bij bestellen aangeroepen; controleer dit in de webdemo en voeg zo nodig in de Koffie-repository een webfallback toe. Native notificaties zijn geen vereiste voor een browserdemo.
 
@@ -81,5 +83,13 @@ NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL=https://jouw-schoolproject.onrender.com/log
 ```
 
 Dit zijn voorbeeldadressen: vervang ze door de echte, geteste HTTPS-URL's. Lokaal kun je ze in het genegeerde `.env.local` zetten. De waarden zijn openbaar en mogen geen wachtwoorden of tokens bevatten. Bouw en deploy het portfolio opnieuw na het instellen of wijzigen; Next.js neemt deze waarden tijdens de build op.
+
+### Insluiten en inloggen
+
+Beide hosts moeten het portfolio toestemming geven om de demo in een iframe te laden. Controleer de responseheaders: `X-Frame-Options: DENY` of `SAMEORIGIN` blokkeert een portfolio op een ander domein. Stel bij de demoserver een Content Security Policy in met `frame-ancestors` voor de exacte HTTPS-origin van je portfolio (en zo nodig je eigen demo-origin). Voeg die origin toe aan een bestaande policy in plaats van andere beveiligingsregels te overschrijven. Deze toestemming moet van de demo komen; het portfolio kan dit niet omzeilen.
+
+De frames staan scripts, formulieren en de eigen origin toe, maar geen pop-ups of navigatie van het bovenliggende portfolio. Test ook of links en externe loginflows van de projecten daarmee werken.
+
+Voor het Express-project zijn sessiecookies extra belangrijk: in een iframe op een ander domein kan inloggen mislukken door third-party-cookiebeperkingen. Gebruik bij voorkeur hetzelfde site-domein, bijvoorbeeld `portfolio.jouwdomein.be` en `boeken.jouwdomein.be`, beide via HTTPS. Voor cross-site cookies zijn `SameSite=None; Secure` en de juiste Express `trust proxy`-instelling nodig, maar browsers kunnen ze alsnog blokkeren. Controleer registratie, inloggen en sessiebehoud echt vanuit het ingebouwde venster; een werkende losse loginpagina is onvoldoende.
 
 Er zijn tijdens dit onderzoek geen deployments aangemaakt of wijzigingen naar de twee projectrepositories gepusht. Het portfolio is voorbereid op de URL's; publicatie vereist nog je accounts bij de gekozen hosts en de genoemde fixes in het schoolproject.
