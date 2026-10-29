@@ -19,7 +19,7 @@ export default function Projects() {
       <div className={styles.container}>
         <div className={styles.top}>
           <div>
-            <p className={styles.kicker}>04 / projecten</p>
+            <p className={styles.kicker}>projecten</p>
             <h2>
               mijn
               <br />

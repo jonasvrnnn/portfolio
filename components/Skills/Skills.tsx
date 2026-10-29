@@ -21,22 +21,17 @@ export default function Skills() {
     <section className={styles.section} id="skills">
       <div className={styles.container}>
         <div className={styles.heading}>
-          <p className={styles.kicker}>03 / VAARDIGHEDEN</p>
+          <p className={styles.kicker}>VAARDIGHEDEN</p>
           <h2>
             Tools die ik
             <br />
             <span>onder de knie heb.</span>
           </h2>
-          <p className={styles.description}>
-            Technologieën waarmee ik al gewerkt heb tijdens mijn opleiding en
-            projecten. Mijn kennis blijft groeien.
-          </p>
         </div>
         <div className={styles.groups}>
           {groups.map((group) => (
             <article className={styles.group} key={group.number}>
               <div className={styles.groupHeader}>
-                <span>{group.number}</span>
                 <h3>{group.title}</h3>
               </div>
               <div className={styles.tags}>

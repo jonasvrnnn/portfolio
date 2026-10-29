@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: "Project Bijbelboeken",
     eyebrow: "Schoolproject",
     description:
-      "Een webapplicatie om Bijbelboeken en categorieën te verkennen, met zoeken, filters en gebruikersaccounts.",
+      "Een webapplicatie om Bijbelboeken te verkennen, met zoeken, filters en gebruikersaccounts.",
     longDescription: `Registreer je en log vervolgens in om alle Bijbelboeken te ontdekken! Filter de boeken op basis van jouw voorkeuren en vind gemakkelijk wat je zoekt.
 
 Klopt er iets niet, zoals een jaartal of andere informatie? Dan kan je dit zelf aanpassen via het adminaccount.

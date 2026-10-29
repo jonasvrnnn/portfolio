@@ -12,19 +12,20 @@ export default function Hero() {
           <h1>
             Hallo,
             <br />
-            Ik ben Jonas{" "}
+            ik ben Jonas.{" "}
             <span className={styles.gradient}>
               software
-              <br className={styles.desktopBreak} /> devoleper.
+              <br className={styles.desktopBreak} /> developer
             </span>
           </h1>
 
           <div className={styles.actions}>
             <a className={styles.primaryButton} href="#projecten">
-              Bekijk mijn projecten <span aria-hidden="true">↘</span>
+              Bekijk mijn projecten{" "}
+              <span aria-hidden="true">{"\u2198\uFE0E"}</span>
             </a>
             <a className={styles.secondaryButton} href="#contact">
-              Contacteer mij <span aria-hidden="true">↗</span>
+              Contacteer mij <span aria-hidden="true">{"\u2197\uFE0E"}</span>
             </a>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className={styles.cardTop}>
         <span className={styles.number}>{project.number} / PROJECT</span>
         <span className={styles.arrow} aria-hidden="true">
-          ↗
+          {"\u2197\uFE0E"}
         </span>
       </div>
 
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className={styles.githubLink}
           >
-            Bekijk code <span aria-hidden="true">↗</span>
+            Bekijk code <span aria-hidden="true">{"\u2197\uFE0E"}</span>
           </a>
         </div>
       </div>

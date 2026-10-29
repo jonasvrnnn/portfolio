@@ -3,11 +3,11 @@ export default function Contact() {
   return (
     <section className={styles.section} id="contact">
       <div className={styles.container}>
-        <p className={styles.kicker}>05 / CONTACT</p>
+        <p className={styles.kicker}>CONTACT</p>
         <h2>
-          Interesse voor samenwerking?
+          Interesse voor een samenwerking?
           <br />
-          <span>Ik hoor graag van je!</span>
+          <span>Ik hoor graag van u!</span>
         </h2>
 
         <div className={styles.actions}>
@@ -15,7 +15,7 @@ export default function Contact() {
             className={styles.primary}
             href="mailto:Jonas.verbruggen@student.ap.be"
           >
-            Stuur me een e-mail <span aria-hidden="true">↗</span>
+            Stuur me een e-mail <span aria-hidden="true">{"\u2197\uFE0E"}</span>
           </a>
           <a
             className={styles.secondary}
@@ -23,11 +23,11 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub-profiel <span aria-hidden="true">↗</span>
+            GitHub-profiel <span aria-hidden="true">{"\u2197\uFE0E"}</span>
           </a>
         </div>
         <a className={styles.cv} href="/cv.pdf" download>
-          Download mijn cv <span aria-hidden="true">↓</span>
+          Download mijn cv <span aria-hidden="true">{"\u2193\uFE0E"}</span>
         </a>
       </div>
     </section>
