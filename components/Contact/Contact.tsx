@@ -5,16 +5,16 @@ export default function Contact() {
       <div className={styles.container}>
         <p className={styles.kicker}>05 / CONTACT</p>
         <h2>
-          Een idee of kans?
+          Interesse voor samenwerking?
           <br />
-          <span>Ik hoor graag van je.</span>
+          <span>Ik hoor graag van je!</span>
         </h2>
-        <p className={styles.description}>
-          Wil je samenwerken, iets vragen of gewoon even kennismaken? Stuur me
-          gerust een bericht.
-        </p>
+
         <div className={styles.actions}>
-          <a className={styles.primary} href="mailto:VUL-HIER-JE-EMAIL-IN">
+          <a
+            className={styles.primary}
+            href="mailto:Jonas.verbruggen@student.ap.be"
+          >
             Stuur me een e-mail <span aria-hidden="true">↗</span>
           </a>
           <a
@@ -29,10 +29,6 @@ export default function Contact() {
         <a className={styles.cv} href="/cv.pdf" download>
           Download mijn cv <span aria-hidden="true">↓</span>
         </a>
-        <p className={styles.setupNote}>
-          Vergeet niet je e-mailadres in te vullen en je cv als{" "}
-          <code>public/cv.pdf</code> toe te voegen.
-        </p>
       </div>
     </section>
   );

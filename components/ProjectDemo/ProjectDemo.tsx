@@ -7,7 +7,10 @@ type ProjectDemoProps = {
   compact?: boolean;
 };
 
-export default function ProjectDemo({ project, compact = false }: ProjectDemoProps) {
+export default function ProjectDemo({
+  project,
+  compact = false,
+}: ProjectDemoProps) {
   const isApp = project.category === "App";
 
   return (
@@ -17,15 +20,27 @@ export default function ProjectDemo({ project, compact = false }: ProjectDemoPro
     >
       <div className={styles.heading}>
         <span>{isApp ? "MOBIELE APP" : "FULL-STACK WEBSITE"}</span>
-        <span className={styles.status}>{project.demoUrl ? "Probeer het hier" : "Demo volgt"}</span>
+        <span className={styles.status}>
+          {project.demoUrl ? "Probeer het hier" : "Demo volgt"}
+        </span>
       </div>
       <div className={styles.stage}>
         <div className={isApp ? styles.phone : styles.browser}>
           <div className={styles.chrome} aria-hidden="true">
-            {isApp ? <span className={styles.speaker} /> : <><span className={styles.dots}>● ● ●</span><span className={styles.browserTitle}>{project.title}</span></>}
+            {isApp ? (
+              <span className={styles.speaker} />
+            ) : (
+              <>
+                <span className={styles.dots}>● ● ●</span>
+                <span className={styles.browserTitle}>{project.title}</span>
+              </>
+            )}
           </div>
           {project.demoUrl && !isApp ? (
-            <WebsiteDemoFrame src={project.demoUrl} title={`${project.title} — interactieve website`} />
+            <WebsiteDemoFrame
+              src={project.demoUrl}
+              title={`${project.title} — interactieve website`}
+            />
           ) : project.demoUrl ? (
             <iframe
               className={styles.screen}
@@ -37,19 +52,35 @@ export default function ProjectDemo({ project, compact = false }: ProjectDemoPro
             />
           ) : (
             <div className={styles.placeholder}>
-              <span className={styles.symbol} aria-hidden="true">{isApp ? "☕" : "↗"}</span>
+              <span className={styles.symbol} aria-hidden="true">
+                {isApp ? "☕" : "↗"}
+              </span>
               <h3>{project.title}</h3>
-              <p>{isApp ? "Ontdek de app binnenkort hier, in dit telefoonvenster." : "Gebruik de website binnenkort hier, zonder het portfolio te verlaten."}</p>
-              <span className={styles.pending}>Interactieve demo nog niet beschikbaar</span>
+              <p>
+                {isApp
+                  ? "Ontdek de app binnenkort hier, in dit telefoonvenster."
+                  : "Gebruik de website binnenkort hier, zonder het portfolio te verlaten."}
+              </p>
+              <span className={styles.pending}>
+                Interactieve demo nog niet beschikbaar
+              </span>
             </div>
           )}
-          {isApp && <div className={styles.homeIndicator} aria-hidden="true"><span /></div>}
+          {isApp && (
+            <div className={styles.homeIndicator} aria-hidden="true">
+              <span />
+            </div>
+          )}
         </div>
       </div>
-      <p className={styles.caption}>
-        {isApp ? "Een mobiele app, met een interactieve webdemo in een telefoonframe." : "De volledige desktopweergave, verkleind om hier te passen. Je kunt klikken en scrollen."}
-      </p>
-      {project.demoUrl && <p className={styles.help}>Blijft het venster leeg? De demo kan tijdelijk onbereikbaar zijn of insluiten blokkeren.</p>}
+
+      {project.demoUrl && (
+        <p className={styles.help}>
+          Blijft het venster leeg? Wacht dan een tiental seconden en je kan weer
+          verdergaan. Wil je de app liever in het groot bekijken? Klik dan
+          buiten het mini venster om de app op volledig scherm te openen.
+        </p>
+      )}
     </section>
   );
 }

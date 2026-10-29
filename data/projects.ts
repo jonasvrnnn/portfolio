@@ -16,11 +16,11 @@ export const projects: Project[] = [
   {
     slug: "koffie",
     title: "Koffie",
-    eyebrow: "Mobiele app · Persoonlijk project",
+    eyebrow: "schoolproject",
     description:
-      "Een koffie-app waarin je warme en koude koffies ontdekt, favorieten bewaart en je bestellingen bijhoudt.",
+      "Een koffie-app waarin je warme en koude koffies worden opsomt, favorieten bewaart en je bestellingen bijhoudt.",
     longDescription:
-      "Gebouwd met Expo en React Native, met ondersteuning voor de browser. De app haalt koffies op via een externe API. Je kunt koffies bekijken, favorieten opslaan en een bestellijst met aantallen bijhouden. Favorieten en bestellingen worden lokaal op je apparaat bewaard.",
+      "Zin in een chai latte of een espresso? Bestel dan via mijn zelfgemaakte koffie-app! Hier vind je een uitgebreide keuze aan verschillende koffies en theetjes. Duid ook je favoriete drankjes aan, zodat je ze later gemakkelijk kan terugvinden en niet telkens opnieuw hoeft te zoeken wanneer je iets wilt bestellen.",
     technologies: ["Expo", "React Native", "TypeScript", "REST API"],
     category: "App",
     githubUrl: "https://github.com/jonasvrnnn/koffie",
@@ -30,16 +30,22 @@ export const projects: Project[] = [
   },
   {
     slug: "project-webontwikkeling-2025",
-    title: "Project webontwikkeling 2025",
+    title: "Project Bijbelboeken",
     eyebrow: "Schoolproject",
     description:
       "Een webapplicatie om Bijbelboeken en categorieën te verkennen, met zoeken, filters en gebruikersaccounts.",
-    longDescription:
-      "Een schoolproject met een Express-server en EJS-templates. Boeken, categorieën, gebruikers en sessies worden opgeslagen in MongoDB. Bezoekers kunnen een account aanmaken en boeken doorzoeken en filteren; beheerders kunnen boekgegevens aanpassen.",
+    longDescription: `Registreer je en log vervolgens in om alle Bijbelboeken te ontdekken! Filter de boeken op basis van jouw voorkeuren en vind gemakkelijk wat je zoekt.
+
+Klopt er iets niet, zoals een jaartal of andere informatie? Dan kan je dit zelf aanpassen via het adminaccount.
+
+Gebruikersnaam: admin
+Wachtwoord: admin`,
     technologies: ["TypeScript", "Express", "EJS", "MongoDB"],
     category: "Full-stack",
     githubUrl: "https://github.com/jonasvrnnn/project-webontwikkeling-2025",
-    demoUrl: process.env.NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL ? "/demo/boeken" : undefined,
+    demoUrl: process.env.NEXT_PUBLIC_WEBONTWIKKELING_DEMO_URL
+      ? "/demo/boeken"
+      : undefined,
     featured: true,
     number: "02",
   },
